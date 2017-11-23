@@ -1,12 +1,13 @@
 Stream 3 Django project
 
-What this project does - 
+What this project does - This app allows users to login and input projects that need to be done and a priority system which the user can customise forcing users to select just one project which needs to be done next,
 Needs it fulfils - Lightweight productivity workflow app
-Functionality - 
-Technologies used - 
+Functionality - Login create items tasks or projects, and automatically organise by priority to show what needss to be done next. The shopping cart will be a donation page to keep the website running.
+Technologies used - Django, Bootstrap, Pencil, SQL, 
 Deployment method
 Testing - 
 Accreditation - 
+Mockup file: stream3mockup.png
 
 Requirements:
 Multiple app Django apps for each separate reusable component
