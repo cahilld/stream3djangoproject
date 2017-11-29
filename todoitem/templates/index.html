@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+    
+    <h1>Things to do</h1>
+    
+<table>
+       {% for item in items %}
+       <tr>
+           <td>{{ item.name  }}</td>
+           <td>{{ item.status  }}</td>
+
+           
+           <td>
+               <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>
+           </td>
+       </tr>
+       {% empty %}
+       <p>You have nothing to do.</p>
+       {% endfor %}
+
+   </table>
+    
+    <hr>
+    
+    <a href="add">Add an Item</a>
+{% endblock content %}
