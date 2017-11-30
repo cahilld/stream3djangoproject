@@ -1,15 +1,32 @@
 Stream 3 Django project
 
-What this project does - This app allows users to login and input projects that need to be done and a priority system which the user can customise forcing users to select just one project which needs to be done next,
-Needs it fulfils - Lightweight productivity workflow app
-Functionality - Login create items tasks or projects, and automatically organise by priority to show what needss to be done next. The shopping cart will be a donation page to keep the website running.
-Technologies used - Django, Bootstrap, Pencil, SQL, 
-Deployment method
-Testing - 
-Accreditation - 
-Mockup file: stream3mockup.png
+Purpose:
+This is a lightweight app that allows users to login and configure their own workflow similar to a KanBan board with a focus on doing one task at a time until it is fully completed.
 
-Requirements:
+Needs it fulfils:
+Put an end to multitasking, by using a lightweight easy to configure workflow app.
+
+Functionality:
+Login create items/tasks for projects, and organise by priority to show what needs to be done next. A shopping cart will be a donation page for the public to use in non commercial environments.
+
+User Interface (UI):
+Register, Log In, Log Out, Create Item in an easy manner with no clutter to not waste time. Mobile first approach, with ability to display more on larger screens
+
+User Experience (UX):
+Each user will have the functionality brought by the implementation of the Dragula library to allow users to drag a new item/task into their WIP bin. Minimal styling design that is easy to read.
+
+Technologies used - Django, Bootstrap, Pencil, Dragula JS
+
+Deployment method
+Testing - Register, Log In, Log Out, Create To Do Items, 
+
+Accreditation:
+Dragula - https://bevacqua.github.io/dragula/
+
+Mockup file:
+stream3mockup.png
+
+Requirements for project:
 Multiple app Django apps for each separate reusable component
 Authentication mechanism - register, login, log out, and reset password.
 E-commerce functionality - Stripe and/or Paypal
