@@ -4,8 +4,11 @@ from .forms import TodoItemForm
 
 # Create your views here.
 def get_index(request):
-    results = TodoItem.objects.all()
-    return render(request, "index.html", {'items': results})
+    if request.user.is_authenticated:
+        results = TodoItem.objects.filter(owner=request.user)
+        return render(request, "index.html", {'items': results})
+    else:
+        return render(request, "index.html")
 
 def add_item(request):
     if request.method == "POST":

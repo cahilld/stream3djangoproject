@@ -5,7 +5,10 @@
     <h1>Things to do</h1>
     
 <table>
+    
+    {% if user.is_authenticated %}
        {% for item in items %}
+       <div>
        <tr>
            <td>{{ item.name  }}</td>
            <td>{{ item.status  }}</td>
@@ -15,9 +18,11 @@
                <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>
            </td>
        </tr>
+       </div>
        {% empty %}
        <p>You have nothing to do.</p>
        {% endfor %}
+      {% endif %}
 
    </table>
     
