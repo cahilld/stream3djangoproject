@@ -15,7 +15,8 @@ Register, Log In, Log Out, Create Item in an easy manner with no clutter to not 
 User Experience (UX):
 Each user will have the functionality brought by the implementation of the Dragula library to allow users to drag a new item/task into their WIP bin. Minimal styling design that is easy to read.
 
-Technologies used - Django, Bootstrap, Pencil, Dragula JS
+Technologies used:
+Django, Bootstrap, Pencil, Dragula JS
 
 Deployment method
 Testing - Register, Log In, Log Out, Create To Do Items, 

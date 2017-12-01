@@ -2,18 +2,16 @@
 {% block content %}
 
     
-    <h1>Things to do</h1>
+    <h1>Workbasket</h1>
     
 <table>
     
     {% if user.is_authenticated %}
        {% for item in items %}
-       <div>
+       <div class="container">
        <tr>
            <td>{{ item.name  }}</td>
            <td>{{ item.status  }}</td>
-
-           
            <td>
                <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>
            </td>

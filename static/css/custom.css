@@ -12,3 +12,19 @@ footer {
    color: #A9A9A9
 ;
 }
+
+#navbar{
+    background-color: rgb(111,138,186);
+}
+#id_name{
+    background-color: rgb(231,238,246);
+}
+#id_description{
+    background-color: rgb(231,238,246);
+}
+#id_owner{
+    background-color: rgb(231,238,246);
+}
+#id_status{
+    background-color: rgb(231,238,246);
+}

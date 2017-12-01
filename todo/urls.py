@@ -15,15 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views import static
 from todoitem.views import get_index,add_item,edit_item,toggle_item
 from accounts import urls as accounts_urls
+from donations.views import all_products
+from donations import urls as product_urls
+from .settings import MEDIA_ROOT
+from cart import urls as urls_cart
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name="home"),
+    url(r'^donations/', include(product_urls)),
     url(r'add$', add_item,),
     url(r'^edit/(\d+)$', edit_item),
     url(r'^toggle/(\d+)$', toggle_item),
     url(r'^accounts/', include(accounts_urls)),
-    
+    url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
+    url(r'^cart/', include(urls_cart)),
 ]
