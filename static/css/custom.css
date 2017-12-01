@@ -7,15 +7,18 @@ footer {
    margin-top: 40px;
    padding-top: 40px;
    padding-bottom: 40px;
-   border-top: 1px solid #ededed
-;
-   color: #A9A9A9
-;
+   border-top: 1px solid #ededed;
+   color: #A9A9A9;
 }
 
-#navbar{
-    background-color: rgb(111,138,186);
+#navigation{
+    background: rgb(29,39,68);
+    background: -webkit-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
+    background: -o-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
+    background: -moz-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
+    background: linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
 }
+
 #id_name{
     background-color: rgb(231,238,246);
 }

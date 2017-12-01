@@ -6,7 +6,6 @@ def cart_contents(request):
     """
     Ensures that the cart contents are available when rendering every page. 
     """
-
     cart = request.session.get('cart', {})
     
     cart_items = []
