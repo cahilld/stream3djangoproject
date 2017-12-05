@@ -1,6 +1,22 @@
 body {
-   font-family: Arial;
+   font-family: Arial, sans-serif;
    padding-top: 100px;
+}
+
+#navigation{
+    background: rgb(29,39,68);
+    background: -webkit-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
+    background: -o-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
+    background: -moz-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
+    background: linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
+    padding: 0px;
+    padding-right: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+.navcontainer{
+    text-align: center;
 }
 
 footer {
@@ -11,51 +27,49 @@ footer {
    color: #A9A9A9;
 }
 
-/* Nav styling */
-#navbar{
-    text-align: center;
-}
-#navigation{
-    background: rgb(29,39,68);
-    background: -webkit-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
-    background: -o-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
-    background: -moz-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
-    background: linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
-}
-
 #id_name{
     background-color: rgb(231,238,246);
+    color: black;
+    text-align: left;
 }
 #id_description{
     background-color: rgb(231,238,246);
+    color: black;
+    text-align: left;
 }
 #id_owner{
     background-color: rgb(231,238,246);
+    color: black;
+    text-align: left;
 }
 #id_status{
     background-color: rgb(231,238,246);
+    color: black;
+    text-align: left;
 }
 
 h2{
-    color: navy;
+    color: #ffffff;
+    text-align: center;
 }
 
 a { color: inherit; }
 
 /* Button Style */
 .button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: rgb(29,39,68);
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  padding: 10px;
-  width: 300px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+    font-family: sans-serif;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(29,39,68);
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
 }
 
 .button span {

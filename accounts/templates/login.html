@@ -2,7 +2,7 @@
 {% load bootstrap_tags %}
     
     {% block content %}
-    <h1>Log in to the site!</h1>
+    <h2>Log in to the site!</h2>
     
     <form method="POST">
         
@@ -10,7 +10,7 @@
         
         {{ form | as_bootstrap }}
         
-        <button type="submit">Login</button>
+        <button class="button" style="vertical-align:middle" type="submit">Login</button>
         <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
     </form>
     {% endblock %}

@@ -3,27 +3,9 @@
 
     
     <h2>Workflow</h2>
-    
-<table>
-    
-    <!--{% if user.is_authenticated %}-->
-    <!--   {% for item in items %}-->
-    <!--       <tr>-->
-    <!--           <td>{{ item.name  }}</td>-->
-    <!--           <td>{{ item.status  }}</td>-->
-    <!--           <td>-->
-    <!--               <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>-->
-    <!--           </td>-->
-    <!--       </tr>-->
-    <!--   {% empty %}-->
-    <!--   <p>You have nothing to do.</p>-->
-    <!--   {% endfor %}-->
-    <!--{% endif %}-->
-
-</table>
 
 <hr>
-
+{% if user.is_authenticated %}
     <div class='parent'>
       <div class='wrapper'>
         <div id='taskcolumna' class='container'>
@@ -56,9 +38,15 @@
         </div>
       </div>
     </div>
-
 <hr>
-
     <button class="button" style="vertical-align:middle"><a href="add">Add task</a></button>
+    
+    {% else %}
+    <p>Please register for a free account so you can create your own workflow app.</p>
+    <br>
+    <p>
+    The purpose of this app is to assist with managing the current tasks in a minimal easy to input design 
+    </p>
+{% endif %}
 
 {% endblock content %}

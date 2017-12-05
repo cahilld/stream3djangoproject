@@ -12,7 +12,6 @@
     <!--Dragula-->
     <link href={% static 'dist/dragula.min.css' %} rel='stylesheet' type='text/css' />
     <link href={% static 'example/example.css' %} rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" href="favicon.ico">
     <!--Dragula End-->
 
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
@@ -26,7 +25,7 @@
 <body>
     <!-- Fixed masthead -->
     <nav id="navigation" class="navbar navbar-masthead navbar-default navbar-fixed-top">
-        <div class="container">
+        <div class="navcontainer">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -63,7 +62,7 @@
         {% block content %} {% endblock %}
     </div>
     <footer>
-        <div class="container">
+        <div class="navcontainer">
             <p>By Des Cahill</p>
         </div>
     </footer>
