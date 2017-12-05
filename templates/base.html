@@ -8,10 +8,18 @@
     <title>Flow Chart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    
+    <!--Dragula-->
+    <link href={% static 'dist/dragula.min.css' %} rel='stylesheet' type='text/css' />
+    <link href={% static 'example/example.css' %} rel='stylesheet' type='text/css' />
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--Dragula End-->
+
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <link rel="stylesheet" href="{% static 'dist/dragula.css' %}">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     {% block head_js %}
     {% endblock head_js %}
 </head>
@@ -47,10 +55,7 @@
                         </a>
                     </li>
                 </ul>
-                    <!--<form action="#" method="get">-->
-                    <!--    <input type="text" name="q">-->
-                    <!--    <button type="submit">Search</button>-->
-                    <!--</form>-->
+
             </div>
         </div>
     </nav>
@@ -62,6 +67,7 @@
             <p>By Des Cahill</p>
         </div>
     </footer>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/$VERSION/dragula.min.js'></script>
+    <script src={% static 'dist/dragula.min.js' %}></script>
+    <script src={% static 'example/example.min.js' %}></script>
 </body>
 </html>
