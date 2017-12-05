@@ -107,9 +107,10 @@ ul {
 input {
   border: none;
   outline: none;
-  background-color: #ecf0f1;
+  /* Edit Button */
+  background-color: #192036;
   padding: 10px;
-  color: #942A57;
+  color: #ffffff;
   border: 0;
   margin: 5px 0;
   display: block;
@@ -117,7 +118,7 @@ input {
 }
 
 button {
-  background-color: #ecf0f1;
+  background-color: #192036;
   color: #942A57;
   border: 0;
   padding: 18px 12px;
@@ -127,8 +128,8 @@ button {
 }
 
 button:hover {
-  background-color: #e74c3c;
-  color: #ecf0f1;
+  background-color: #35426e;
+  color: #ffffff;
 }
 
 .gh-fork {

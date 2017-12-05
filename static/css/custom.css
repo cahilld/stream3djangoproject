@@ -12,6 +12,9 @@ footer {
 }
 
 /* Nav styling */
+#navbar{
+    text-align: center;
+}
 #navigation{
     background: rgb(29,39,68);
     background: -webkit-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));

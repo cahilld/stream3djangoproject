@@ -2,21 +2,19 @@
 {% block content %}
 
     
-    <h1>Workbasket</h1>
+    <h2>Workflow</h2>
     
 <table>
     
     {% if user.is_authenticated %}
        {% for item in items %}
-       <div class="container">
-       <tr>
-           <td>{{ item.name  }}</td>
-           <td>{{ item.status  }}</td>
-           <td>
-               <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>
-           </td>
-       </tr>
-       </div>
+           <tr>
+               <td>{{ item.name  }}</td>
+               <td>{{ item.status  }}</td>
+               <td>
+                   <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>
+               </td>
+           </tr>
        {% empty %}
        <p>You have nothing to do.</p>
        {% endfor %}
@@ -28,26 +26,23 @@
 
     <div class='parent'>
       <div class='wrapper'>
-        <div id='left-defaults' class='container'>
+        <div id='taskcolumna' class='container'>
           <div>You can move these elements between these two containers</div>
           <div>Moving them anywhere else isn't quite possible</div>
-          <div>Anything can be moved around. That includes images, <a href='https://github.com/bevacqua/dragula'>links</a>, or any other nested elements.
-            <div>nested div</div>
-            </div>
         </div>
-        <div id='right-defaults' class='container'>
+        <div id='taskcolumnb' class='container'>
           <div>There's also the possibility of moving elements around in the same container, changing their position</div>
           <div>This is the default use case. You only need to specify the containers you want to use</div>
           <div>More interactive use cases lie ahead</div>
           <div>Moving <code>&lt;input/&gt;</code> elements works just fine. You can still focus them, too. <input placeholder='See?' /></div>
           <div>Make sure to check out the <a href='https://github.com/bevacqua/dragula#readme'>documentation on GitHub!</a></div>
         </div>
-        <div id='left-defaults' class='container'>
+        <div id='taskcolumnc' class='container'>
           <div>Done</div>
           <div>Done2</div>
           <div>Done3</div>
         </div>
-        <div id='right-defaults' class='container'>
+        <div id='taskcolumnd' class='container'>
           <div>Abandoned1</div>
           <div>Abandoned2</div>
           <div>Abandoned3</div>
