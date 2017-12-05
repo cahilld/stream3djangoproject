@@ -18,7 +18,7 @@
        {% empty %}
        <p>You have nothing to do.</p>
        {% endfor %}
-      {% endif %}
+    {% endif %}
 
 </table>
 
@@ -27,26 +27,32 @@
     <div class='parent'>
       <div class='wrapper'>
         <div id='taskcolumna' class='container'>
-          <div>You can move these elements between these two containers</div>
-          <div>Moving them anywhere else isn't quite possible</div>
+           {% for item in items %}
+              {% ifequal item.status 'P' %}
+              <div>{{ item.name }}</div>
+              {% endifequal %}
+           {% endfor %}
         </div>
         <div id='taskcolumnb' class='container'>
-          <div>There's also the possibility of moving elements around in the same container, changing their position</div>
-          <div>This is the default use case. You only need to specify the containers you want to use</div>
-          <div>More interactive use cases lie ahead</div>
-          <div>Moving <code>&lt;input/&gt;</code> elements works just fine. You can still focus them, too. <input placeholder='See?' /></div>
-          <div>Make sure to check out the <a href='https://github.com/bevacqua/dragula#readme'>documentation on GitHub!</a></div>
+           {% for item in items %}
+              {% ifequal item.status 'I' %}
+              <div>{{ item.name }}</div>
+              {% endifequal %}
+           {% endfor %}
         </div>
         <div id='taskcolumnc' class='container'>
-          <div>Done</div>
-          <div>Done2</div>
-          <div>Done3</div>
+           {% for item in items %}
+              {% ifequal item.status 'D' %}
+              <div>{{ item.name }}</div>
+              {% endifequal %}
+           {% endfor %}
         </div>
         <div id='taskcolumnd' class='container'>
-          <div>Abandoned1</div>
-          <div>Abandoned2</div>
-          <div>Abandoned3</div>
-          <div>Abandoned4</div>
+           {% for item in items %}
+              {% ifequal item.status 'A' %}
+              <div>{{ item.name }}</div>
+              {% endifequal %}
+           {% endfor %}
         </div>
       </div>
     </div>
