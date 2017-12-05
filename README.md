@@ -39,3 +39,4 @@ Javascript Logic for enhanced frontend UX
 Backend Python/Django Packages - EG Disquis, Django Rest Framework - using the best tool for the task
 Text Exensively - Use automated Django tests wherever possible. For your JavaScript code, consider using Jasmine tests. 
 README.md - What the project does, Need that it fulfils, Functionality of the project, Technologies used, Deployment method, Testing and Accreditation, What was kept and How it was changed.
+
