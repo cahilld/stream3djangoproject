@@ -11,6 +11,7 @@ footer {
    color: #A9A9A9;
 }
 
+/* Nav styling */
 #navigation{
     background: rgb(29,39,68);
     background: -webkit-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
@@ -30,4 +31,52 @@ footer {
 }
 #id_status{
     background-color: rgb(231,238,246);
+}
+
+h2{
+    color: navy;
+}
+
+a { color: inherit; }
+
+/* Button Style */
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(29,39,68);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  color: white;
+}
+
+.button:hover span:after {
+  opacity: 2;
+  right: 0;
 }

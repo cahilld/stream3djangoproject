@@ -3,7 +3,7 @@
 
 {% block content %}
     <img src="{{ MEDIA_URL }}{{ request.user.profile.image }}" style="width:150px; height: 150px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
-    <h2>Success!</h2>
+    <h2>My profile</h2>
     <p>You are logged in as {{ user.email }} </p>            
-    <a href="{% url 'home' %}"> Go Shop</a>
+    <button class="button" style="vertical-align:middle"><a href="{% url 'home' %}"><span>Go to my workflow</span></a></button>
 {% endblock %}
