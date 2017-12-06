@@ -126,10 +126,10 @@ input {
   margin: auto;
 }
 .container {
-  display: table-row;
+  display: table-cell;
   background-color: rgba(255, 255, 255, 0.2);
-  width: 50%;
-  text-align: left;
+  width: 25%;
+  text-align: center;
   font-family: sans-serif;
 }
 .container:nth-child(odd) {
@@ -163,8 +163,10 @@ input {
 .container.ex-over {
   background-color: rgba(255, 255, 255, 0.3);
 }
-#left-lovehandles > div,
-#right-lovehandles > div {
+#a-lovehandles > div,
+#b-lovehandles > div,
+#c-lovehandles > div,
+#d-lovehandles > div{
   cursor: initial;
 }
 .handle {

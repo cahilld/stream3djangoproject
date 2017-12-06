@@ -5,40 +5,43 @@
 
 <hr>
 {% if user.is_authenticated %}
-    <div class='parent row'>
-      <div class='wrapper col-12'>
-        <div id='taskcolumna' class='container'>
-            {% for item in items %}
-                {% ifequal item.status 'P' %}
-                    <div>{{ item.name }}</div>
-                {% endifequal %}
-            {% endfor %}
+    <div class="parent">
+        <div class="row">
+            <div class="wrapper col-12">
+                <div id="taskcolumna" class="container">
+                    {% for item in items %}
+                        {% ifequal item.status 'P' %}
+                            <div>{{ item.name }}</div>
+                        {% endifequal %}
+                    {% endfor %}
+                </div>
+                <div id="taskcolumnb" class="container">
+                    {% for item in items %}
+                        {% ifequal item.status 'I' %}
+                            <div>
+                              {{ item.name }}<br>
+                              {{ item.description }}
+                            </div>
+                        {% endifequal %}
+                    {% endfor %}
+                </div>
+            
+                <div id="taskcolumnc" class="container">
+                    {% for item in items %}
+                        {% ifequal item.status 'D' %}
+                            <div>{{ item.name }}</div>
+                        {% endifequal %}
+                    {% endfor %}
+                </div>
+                <div id="taskcolumnd" class="container">
+                    {% for item in items %}
+                        {% ifequal item.status 'A' %}
+                            <div>{{ item.name }}</div>
+                        {% endifequal %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-        <div id='taskcolumnb' class='container'>
-            {% for item in items %}
-                {% ifequal item.status 'I' %}
-                    <div>
-                      {{ item.name }}<br>
-                      {{ item.description }}
-                    </div>
-                {% endifequal %}
-            {% endfor %}
-        </div>
-        <div id='taskcolumnc' class='container'>
-            {% for item in items %}
-                {% ifequal item.status 'D' %}
-                    <div>{{ item.name }}</div>
-                {% endifequal %}
-            {% endfor %}
-        </div>
-        <div id='taskcolumnd' class='container'>
-            {% for item in items %}
-                {% ifequal item.status 'A' %}
-                    <div>{{ item.name }}</div>
-                {% endifequal %}
-            {% endfor %}
-        </div>
-      </div>
     </div>
 
     <button id="additembutton"><a href="add">Add task</a></button>
