@@ -142,11 +142,12 @@ button:hover {
 /* dragula-specific example page styles */
 .wrapper {
   display: table;
+  margin: auto;
 }
 .container {
-  display: table-cell;
+  display: table-row;
   background-color: rgba(255, 255, 255, 0.2);
-  width: 50%;
+  width: 25%;
   text-align: left;
   font-family: sans-serif;
 }
@@ -161,7 +162,7 @@ button:hover {
 .gu-mirror {
   margin: 10px;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 20, 0.2);
   transition: opacity 0.4s ease-in-out;
 }
 .container > div {
@@ -210,7 +211,7 @@ button:hover {
 
 #carbonads {
   position: absolute;
-  display: block;
+  display: inline-block;
   overflow: hidden;
   margin-left: -180px;
   padding: 1em;
@@ -234,28 +235,66 @@ button:hover {
 }
 
 #carbonads span {
-  display: block;
+  display: inline-block;
   overflow: hidden;
 }
 
 .carbon-img {
-  display: block;
+  display: inline-block;
   margin: 0 auto 1em;
 }
 
 .carbon-text {
-  display: block;
+  display: inline-block;
   margin-bottom: 1em;
 }
 
 .carbon-poweredby {
-  display: block;
+  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 9px;
 }
+@media only screen and (min-width: 375px) and (max-width: 768px){
+.container {
+  display: table-cell;
+  }
 
-@media only screen and (min-width: 320px) and (max-width: 960px) {
+  #carbonads {
+    position: relative;
+    float: none;
+    margin: 0 auto -2em;
+    max-width: 330px;
+  }
+  #carbonads span {
+    position: relative;
+  }
+  #carbonads > span {
+    max-width: none;
+  }
+  .carbon-img {
+    float: left;
+    margin: 0 1em 0 0;
+  }
+  .carbon-text {
+    float: left;
+    margin-bottom: 0;
+    max-width: calc(100% - 130px - 1em);
+    text-align: left;
+  }
+  .carbon-poweredby {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+.container {
+  display: table-cell;
+  }
+
   #carbonads {
     position: relative;
     float: none;
