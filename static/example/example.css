@@ -1,7 +1,7 @@
 body {
   background-color: #192035;
   margin: 0 auto;
-  max-width: 760px;
+  /*max-width: 760px;*/
 }
 
 html, body {
@@ -16,11 +16,7 @@ html, body {
   box-sizing: inherit;
 }
 
-body, input, button {
-  font-family: Georgia, Helvetica;
-  font-size: 17px;
-  color: #ffffff;
-}
+
 
 h1 {
   text-align: center;
@@ -107,30 +103,15 @@ ul {
 input {
   border: none;
   outline: none;
-  /* Edit Button */
-  background-color: #192036;
+  background-color: black;
   padding: 10px;
   color: #ffffff;
-  border: 0;
   margin: 5px 0;
   display: block;
   width: 100%;
 }
 
-button {
-  background-color: #192036;
-  color: #942A57;
-  border: 0;
-  padding: 18px 12px;
-  margin-left: 6px;
-  cursor: pointer;
-  outline: none;
-}
 
-button:hover {
-  background-color: #35426e;
-  color: #ffffff;
-}
 
 .gh-fork {
   position: fixed;
@@ -147,7 +128,7 @@ button:hover {
 .container {
   display: table-row;
   background-color: rgba(255, 255, 255, 0.2);
-  width: 25%;
+  width: 50%;
   text-align: left;
   font-family: sans-serif;
 }

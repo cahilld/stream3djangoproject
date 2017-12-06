@@ -30,6 +30,7 @@ Register, Log In, Log Out, Create To Do Items, Donate, Add donations to cart, Ch
 
 Accreditation:
 Dragula - https://bevacqua.github.io/dragula/
+A lot of customisation was done to the files, but the core drag and drop functionality was used to style the front end and contribute to UX and UI.
 
 Mockup file:
 stream3mockup.png

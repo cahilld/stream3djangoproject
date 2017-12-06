@@ -1,6 +1,7 @@
 body {
    font-family: Arial, sans-serif;
-   padding-top: 50px;
+   padding-top: 58px;
+   margin: 0px;
 }
 
 #navigation{
@@ -17,6 +18,68 @@ body {
 
 .navcontainer{
     text-align: center;
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+     line-height: 35px; 
+}
+
+.navbar-default {
+     background-color: #2fa4e7; 
+     border-color: #000000; 
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #ffffff;
+    background-color: #1d2744;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #1d2744;
+}
+
+.profileimage{
+    width:150px;
+    height: 150px;
+    background-color: #12ABB2;
+    color: #ffffff;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.lhspadding{
+    margin-left: 10px;
+}
+
+body, input, button {
+  font-family: Arial;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+button {
+  background-color: #1d2744;
+  color: white;
+  border: 0;
+  padding: 18px 12px;
+  margin-left: 6px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #35426e;
+  color: #ffffff;
+}
+
+#additembutton{
+    margin: 0 auto;
 }
 
 footer {
@@ -72,6 +135,22 @@ a { color: inherit; }
     margin: 5px;
 }
 
+.buttonsmall {
+    font-family: sans-serif;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(29,39,68);
+    border: none;
+    color: white;
+    text-align: center;
+    /*font-size: 20px;*/
+    padding: 5px;
+    width: 60px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
 .button span {
   cursor: pointer;
   display: inline-block;
@@ -97,3 +176,16 @@ a { color: inherit; }
   opacity: 2;
   right: 0;
 }
+
+.btn-success{
+    background-image: none;
+    background-color: rgb(29,39,68);
+    border-color: #1d2744;
+}
+
+.btn-success:hover {
+    color: #ffffff;
+    background-color: #1d2744;
+    border-color: rgb(29,39,68);
+}
+

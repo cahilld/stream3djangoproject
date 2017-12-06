@@ -2,8 +2,8 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-    <img src="{{ MEDIA_URL }}{{ request.user.profile.image }}" style="width:150px; height: 150px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
+    <div class="center"><img src="{{ MEDIA_URL }}{{ request.user.profile.image }}" class="profileimage img-circle"></div>
     <h2>My profile</h2>
-    <p>You are logged in as {{ user.email }} </p>            
-    <button class="button" style="vertical-align:middle"><a href="{% url 'home' %}"><span>Go to my workflow</span></a></button>
+    <p>&emsp; You are logged in as {{ user.email }} </p>            
+    <div class="center"><button class="button" style="vertical-align:middle"><a href="{% url 'home' %}"><span>Go to my workflow</span></a></button></div>
 {% endblock %}
