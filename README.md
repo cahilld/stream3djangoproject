@@ -1,5 +1,10 @@
 Stream 3 Django project
 
+Issues outstanding:
+1: Order not saving (functionality)
+2: In mobile mode page heading on index page being hidden with collapsed menu (design)
+3: Payment success page (UX)
+
 Purpose:
 This is a lightweight app that allows users to login and configure their own workflow similar to a KanBan board with a focus on doing one task at a time until it is fully completed.
 
