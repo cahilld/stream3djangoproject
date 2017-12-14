@@ -23,13 +23,14 @@ from donations import urls as product_urls
 from checkout import urls as checkout_urls
 from .settings import MEDIA_ROOT
 from cart import urls as urls_cart
-from todoitem.views import move_item
+from todoitem.views import move_item, delete_item
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name="home"),
     url(r'^donations/', include(product_urls)),
     url(r'add$', add_item,),
+    url(r'^delete/(\d+)$', delete_item, name="delete"),
     url(r'^edit/(\d+)$', edit_item),
     url(r'^toggle/(\d+)$', toggle_item),
     url(r'^accounts/', include(accounts_urls)),

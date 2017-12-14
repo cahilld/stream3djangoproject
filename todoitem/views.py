@@ -45,7 +45,11 @@ def toggle_item(request, id):
     item.status = not item.status
     item.save()
     return redirect(get_index)
-    
+
+def delete_item(request, id):
+    item=get_object_or_404(TodoItem, pk=id)
+    item.delete()
+    return redirect('home')
     
 def move_item(request):
     # if request.POST and request.is_ajax:

@@ -1,10 +1,14 @@
 body {
-   font-family: Arial, sans-serif;
-   padding-top: 58px;
-   margin: 0px;
-   background-color: #dddddd;
+    font-family: Arial, sans-serif;
+    padding-top: 58px;
+    margin: 0px;
+    background-color: #dddddd;
 }
-
+#deleteitem{
+    background-color: red;
+    padding: 0;
+    margin: 0 auto;
+}
 #navigation{
     background: rgb(29,39,68);
     padding: 0px;
