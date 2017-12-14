@@ -54,7 +54,7 @@ h3 div {
   margin-bottom: 0;
   font-style: italic;
   padding: 10px;
-  background-color: #ff4020;
+  background-color: green;
   border-bottom: 5px solid #c00;
 }
 
@@ -95,7 +95,7 @@ ul {
 }
 
 .parent {
-  background-color: rgba(255, 255, 255, 0.2);
+  /*background-color: #eeeeee;*/
   margin: 50px 0;
   padding: 20px;
 }
@@ -127,14 +127,15 @@ input {
 }
 .container {
   display: table-cell;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #666666;
   width: 25%;
   text-align: center;
   font-family: sans-serif;
 }
 .container:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #1c233c;
 }
+
 /*
  * note that styling gu-mirror directly is a bad practice because it's too generic.
  * you're better off giving the draggable elements a unique class and styling that directly!
@@ -143,7 +144,7 @@ input {
 .gu-mirror {
   margin: 10px;
   padding: 10px;
-  background-color: rgba(0, 0, 20, 0.2);
+  background-color: #eeeeee;
   transition: opacity 0.4s ease-in-out;
 }
 .container > div {
@@ -161,7 +162,7 @@ input {
   background-color: #e74c3c;
 }
 .container.ex-over {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #206b00;
 }
 #a-lovehandles > div,
 #b-lovehandles > div,

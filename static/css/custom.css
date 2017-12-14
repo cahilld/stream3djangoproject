@@ -2,15 +2,11 @@ body {
    font-family: Arial, sans-serif;
    padding-top: 58px;
    margin: 0px;
-   background-color: grey;
+   background-color: #dddddd;
 }
 
 #navigation{
     background: rgb(29,39,68);
-    background: -webkit-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
-    background: -o-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
-    background: -moz-linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
-    background: linear-gradient(rgb(107,132,203), rgb(29,39,68), rgb(14,19,35));
     padding: 0px;
     padding-right: 20px;
     margin: 0px;
@@ -28,13 +24,12 @@ body {
 }
 
 .navbar-default {
-     background-color: #2fa4e7; 
      border-color: #000000; 
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     color: #ffffff;
-    background-color: #1d2744;
+    background-color: #227700;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -60,7 +55,7 @@ body {
 body, input, button {
   font-family: Arial;
   font-size: 17px;
-  color: #ffffff;
+  color: #000044;
 }
 
 button {
@@ -75,7 +70,7 @@ button {
 }
 
 button:hover {
-  background-color: #35426e;
+  background-color: #206b00;
   color: #ffffff;
 }
 
@@ -113,7 +108,7 @@ footer {
 }
 
 h2{
-    color: #ffffff;
+    color: #000044;
     text-align: center;
 }
 
