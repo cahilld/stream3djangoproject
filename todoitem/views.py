@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from .models import TodoItem
 from .forms import TodoItemForm
+import json
 
 # Create your views here.
 def get_index(request):
@@ -44,3 +45,19 @@ def toggle_item(request, id):
     item.status = not item.status
     item.save()
     return redirect(get_index)
+    
+    
+def move_item(request):
+    # if request.POST and request.is_ajax:
+    id = int(request.POST.get('id'))
+    status = request.POST.get('status')
+    item = get_object_or_404(TodoItem, pk=id)
+    item.status = status
+    item.save()
+    
+    resp = {
+        'id': id,
+        'status': status
+    }
+    
+    return HttpResponse(json.dumps(resp))

@@ -8,17 +8,17 @@
     <div class="parent">
         <div class="row">
             <div class="wrapper col-12">
-                <div id="taskcolumna" class="container">
+                <div id="P" class="container">
                     {% for item in items %}
                         {% ifequal item.status 'P' %}
-                            <div>{{ item.name }}</div>
+                            <div id="{{ item.id }}">{{ item.name }}</div>
                         {% endifequal %}
                     {% endfor %}
                 </div>
-                <div id="taskcolumnb" class="container">
+                <div id="I" class="container">
                     {% for item in items %}
                         {% ifequal item.status 'I' %}
-                            <div>
+                            <div id="{{ item.id }}">
                               {{ item.name }}<br>
                               {{ item.description }}
                             </div>
@@ -26,17 +26,17 @@
                     {% endfor %}
                 </div>
             
-                <div id="taskcolumnc" class="container">
+                <div id="D" class="container">
                     {% for item in items %}
                         {% ifequal item.status 'D' %}
-                            <div>{{ item.name }}</div>
+                            <div id="{{ item.id }}">{{ item.name }}</div>
                         {% endifequal %}
                     {% endfor %}
                 </div>
-                <div id="taskcolumnd" class="container">
+                <div id="A" class="container">
                     {% for item in items %}
                         {% ifequal item.status 'A' %}
-                            <div>{{ item.name }}</div>
+                            <div id="{{ item.id }}">{{ item.name }}</div>
                         {% endifequal %}
                     {% endfor %}
                 </div>

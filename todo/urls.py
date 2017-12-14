@@ -23,6 +23,7 @@ from donations import urls as product_urls
 from checkout import urls as checkout_urls
 from .settings import MEDIA_ROOT
 from cart import urls as urls_cart
+from todoitem.views import move_item
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -35,4 +36,5 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(checkout_urls)),
+    url(r'^move/', move_item, name="move_item"),
 ]
