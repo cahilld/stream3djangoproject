@@ -111,14 +111,13 @@ input {
   width: 100%;
 }
 
-
-
-.gh-fork {
-  position: fixed;
-  top: 0;
-  right: 0;
-  border: 0;
-}
+/*GitHub Fork*/
+/*.gh-fork {*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  right: 0;*/
+/*  border: 0;*/
+/*}*/
 
 /* dragula-specific example page styles */
 .wrapper {
