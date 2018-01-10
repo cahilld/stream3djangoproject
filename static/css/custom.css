@@ -9,28 +9,40 @@ body {
     padding: 0;
     margin: 0 auto;
 }
+/* Navbar */
+a.navbar-brand{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin: 0 auto;
+}
+.navbar-default .navbar-toggle {
+    border-color: white;
+    padding-left: 15px;
+}
+.navbar-toggle {
+    margin-right: 0px;
+}
 #navigation{
     background: rgb(29,39,68);
     padding: 0px;
-    padding-right: 20px;
+    padding-right: 0px;
     margin: 0px;
     text-align: center;
 }
-
 .navcontainer{
     text-align: center;
 }
-
 .navbar-nav>li>a {
     padding-top: 10px;
     padding-bottom: 10px;
-     line-height: 35px; 
+    line-height: 35px; 
 }
-
 .navbar-default {
-     border-color: #000000; 
+    border-color: #000000; 
 }
-
+.navbar-toggle collapsed{
+    padding-left: 50px;
+}
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     color: #ffffff;
     background-color: #227700;
@@ -57,25 +69,25 @@ body {
 }
 
 body, input, button {
-  font-family: Arial;
-  font-size: 17px;
-  color: #000044;
+    font-family: Arial;
+    font-size: 17px;
+    color: #000044;
 }
 
 button {
-  background-color: #1d2744;
-  color: white;
-  border: 0;
-  padding: 18px 12px;
-  margin-left: 6px;
-  cursor: pointer;
-  outline: none;
-  width: 100%;
+    background-color: #1d2744;
+    color: white;
+    border: 0;
+    padding: 18px 12px;
+    margin-left: 6px;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
 }
 
 button:hover {
-  background-color: #206b00;
-  color: #ffffff;
+    background-color: #206b00;
+    color: #ffffff;
 }
 
 #additembutton{
@@ -83,11 +95,11 @@ button:hover {
 }
 
 footer {
-   margin-top: 40px;
-   padding-top: 40px;
-   padding-bottom: 40px;
-   border-top: 1px solid #ededed;
-   color: #A9A9A9;
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid #ededed;
+    color: #A9A9A9;
 }
 
 #id_name{
@@ -152,29 +164,29 @@ a { color: inherit; }
 }
 
 .button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 }
 
 .button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
 }
 
 .button:hover span {
-  padding-right: 25px;
-  color: white;
+    padding-right: 25px;
+    color: white;
 }
 
 .button:hover span:after {
-  opacity: 2;
-  right: 0;
+    opacity: 2;
+    right: 0;
 }
 
 .btn-success{
@@ -188,4 +200,3 @@ a { color: inherit; }
     background-color: #1d2744;
     border-color: rgb(29,39,68);
 }
-

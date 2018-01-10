@@ -20,7 +20,8 @@ html, body {
 
 h1 {
   text-align: center;
-  background-color: #AC5C7E;
+  background-color: rgb(29,39,68);
+  color:white;
   margin-top: 20px;
   margin-bottom: 0;
   padding: 10px;
@@ -28,7 +29,8 @@ h1 {
 
 h3 {
   background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 5px solid #A13462;
+  border-bottom: 5px solid rgb(29,39,68);
+  color:white;
   text-align: center;
   padding: 10px;
 }
