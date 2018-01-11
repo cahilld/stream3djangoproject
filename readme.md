@@ -3,6 +3,7 @@ Stream 3 Django project<br/>
 Issues outstanding:<br/>
 1   In mobile mode page heading on index page being hidden with collapsed menu (design)
 2   Payment success page (UX)
+3   Deployment to Heroku
 
 Purpose:<br/>
 This is a lightweight app that allows users to login and configure their own workflow similar to a KanBan board with a focus on doing one task at a time until it is fully completed.<br/>
