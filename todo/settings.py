@@ -28,7 +28,7 @@ SECRET_KEY = "59v12hq=7pn*6+x51r8zm0eigddpu^hq7l3c9p*=cf_j-jm1h("
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-USE_S3 = os.environ.get("USE_S3", False)
+USE_S3 = os.environ.get("USE_S3", True)
 
 ALLOWED_HOSTS = ['stream3-djangoproject-desc.c9users.io', 'stream3workflow.herokuapp.com']
 
