@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-DATABASES = {'default': dj_database_url.parse("postgres://mskjbzsptcgeos:8a14a48befddc29dcb834423c29d850f8bdd9a862de7562e482c9977a71ed0a6@ec2-54-217-243-160.eu-west-1.compute.amazonaws.com:5432/daol3j3s9sjqm1")}
+DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 # DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")) }
 
 
