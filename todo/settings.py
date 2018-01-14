@@ -21,12 +21,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRETKEY")
+SECRET_KEY = "59v12hq=7pn*6+x51r8zm0eigddpu^hq7l3c9p*=cf_j-jm1h("
+# SECRET_KEY = os.environ.get("SECRETKEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-USE_S3 = os.environ.get("USE_S3", True)
+USE_S3 = os.environ.get("USE_S3", False)
 
 ALLOWED_HOSTS = ['stream3-djangoproject-desc.c9users.io', 'stream3workflow.herokuapp.com']
 
@@ -83,8 +85,8 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")) }
+DATABASES = {'default': dj_database_url.parse("postgres://mskjbzsptcgeos:8a14a48befddc29dcb834423c29d850f8bdd9a862de7562e482c9977a71ed0a6@ec2-54-217-243-160.eu-west-1.compute.amazonaws.com:5432/daol3j3s9sjqm1")}
+# DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")) }
 
 
 # Password validation
