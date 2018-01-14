@@ -31,31 +31,24 @@ def login(request):
                     return redirect(profile)
             else:
                 form.add_error(None, "Your username or password was not recognised")
-            
     else:
         form = UserLoginForm()
-    
     return render(request, "login.html", {'form': form})
 
 def register(request):
     if request.method=="POST":
         form = UserRegistrationForm(request.POST)
-        
         if form.is_valid():
             user = form.save()
-            
             user = auth.authenticate(username=form.cleaned_data['username'],
                                      password=form.cleaned_data['password1'])
-                                     
             if user is not None:
                 auth.login(request, user)
                 return redirect('profile')
     else:
         form = UserRegistrationForm()
-    
     return render(request, "register.html", {'form': form})
-    
     
 @login_required()
 def profile(request):
-    return render(request, 'profile.html')    
+    return render(request, 'profile.html')
