@@ -21,14 +21,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "59v12hq=7pn*6+x51r8zm0eigddpu^hq7l3c9p*=cf_j-jm1h("
-# SECRET_KEY = os.environ.get("SECRETKEY")
+# SECRET_KEY = "59v12hq=7pn*6+x51r8zm0eigddpu^hq7l3c9p*=cf_j-jm1h("
+SECRET_KEY = os.environ.get("SECRETKEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get("DEBUG", True)
 
-USE_S3 = os.environ.get("USE_S3", True)
+USE_S3 = os.environ.get("USE_S3", False) #change this to True to to use S3, False to use static
 
 ALLOWED_HOSTS = [os.environ.get("C9_HOSTNAME"), os.environ.get("HOSTNAME")]
 
@@ -122,35 +122,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
-
-AWS_S3_OBJECT_PARAMETERS = {
-    'Expires': 'Thu, 31 Dec 2199 20:00:00 GMT',
-    'CacheControl': 'max-age=94608000',
-}
-
-AWS_STORAGE_BUCKET_NAME = 'workflowapp'
-AWS_S3_REGION_NAME = 'eu-west-1'
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
-
-MEDIAFILES_LOCATION = 'media'
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, "static"),
-)
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
@@ -159,17 +130,57 @@ AUTHENTICATION_BACKENDS = [
     'accounts.backends.EmailAuth',
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
-
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 STRIPE_PUBLISHABLE = os.getenv("STRIPEPUBKY")
 STRIPE_SECRET = os.getenv("STRIPESECKY")
 
-EMAIL_HOST = os.getenv("MAILHOST")
-EMAIL_HOST_USER = os.getenv("MAILHOSTUN")
-EMAIL_HOST_PASSWORD = os.getenv("MAILHOSTPW")
-EMAIL_PORT = os.getenv("MAILHOSTPORT")
-EMAIL_USE_TLS = os.getenv("MAILHOSTTLS")
+EMAIL_HOST = os.getenv('MAILHOST')
+EMAIL_HOST_USER = os.getenv('MAILHOSTUN')
+EMAIL_HOST_PASSWORD = os.getenv('MAILHOSTPW')
+EMAIL_PORT = os.getenv('MAILHOSTPORT')
+EMAIL_USE_TLS = os.getenv('MAILHOSTTLS')
+
+
+DISABLE_COLLECTSTATIC=1
+
+########## static vs S3 storage ##########
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+
+MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
+
+
+
+if USE_S3:
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2199 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    
+    AWS_STORAGE_BUCKET_NAME = 'workflowapp'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+    
+    STATICFILES_LOCATION = 'static'
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    
+    MEDIAFILES_LOCATION = 'media'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+
+
+
+
+
+
