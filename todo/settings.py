@@ -21,14 +21,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = "59v12hq=7pn*6+x51r8zm0eigddpu^hq7l3c9p*=cf_j-jm1h("
-SECRET_KEY = os.environ.get("SECRETKEY")
+SECRET_KEY = "59v12hq=7pn*6+x51r8zm0eigddpu^hq7l3c9p*=cf_j-jm1h("
+# SECRET_KEY = os.environ.get("SECRETKEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", True)
 
-USE_S3 = os.environ.get("USE_S3", False) #change this to True to to use S3, False to use static
+USE_S3 = os.environ.get("USE_S3", True) #change this to True to to use S3, False to use static
 
 ALLOWED_HOSTS = [os.environ.get("C9_HOSTNAME"), os.environ.get("HOSTNAME")]
 
@@ -85,8 +85,7 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
-# DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")) }
+DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")) }
 
 
 # Password validation
@@ -143,19 +142,16 @@ EMAIL_PORT = os.getenv('MAILHOSTPORT')
 EMAIL_USE_TLS = os.getenv('MAILHOSTTLS')
 
 
-DISABLE_COLLECTSTATIC=1
-
 ########## static vs S3 storage ##########
 
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
+STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-
-
-MEDIA_URL = '/media/'
-STATIC_URL = '/static/'
 
 
 
@@ -164,23 +160,19 @@ if USE_S3:
         'Expires': 'Thu, 31 Dec 2199 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+        
     AWS_STORAGE_BUCKET_NAME = 'workflowapp'
-    AWS_S3_REGION_NAME = 'eu-west-1'
+    # AWS_S3_REGION_NAME = 'eu-west-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    
+        
     AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-    
-    STATICFILES_LOCATION = 'static'
-    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     
     MEDIAFILES_LOCATION = 'media'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+        
+    STATICFILES_LOCATION = 'static'
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
-
-
-
-
-
+    
