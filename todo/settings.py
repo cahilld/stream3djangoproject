@@ -132,8 +132,8 @@ AUTHENTICATION_BACKENDS = [
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-STRIPE_PUBLISHABLE = os.getenv('STRIPEPUBKY')
-STRIPE_SECRET = os.getenv('STRIPESECKY')
+STRIPE_PUBLISHABLE = os.getenv("STRIPEPUBKY")
+STRIPE_SECRET = os.getenv("STRIPESECKY")
 
 EMAIL_HOST = os.getenv('MAILHOST')
 EMAIL_HOST_USER = os.getenv('MAILHOSTUN')
