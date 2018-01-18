@@ -2,15 +2,17 @@
 {% load bootstrap_tags %}
     
     {% block content %}
-    <h2>Log in to the site!</h2>
-    
-    <form method="POST">
+    <div class="top-padding">
+        <h2>Log in to the site!</h2>
         
-        {% csrf_token %}
-        
-        {{ form | as_bootstrap }}
-        
-        <button class="button" style="vertical-align:middle" type="submit">Login</button>
-        <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
-    </form>
+        <form method="POST">
+            
+            {% csrf_token %}
+            
+            {{ form | as_bootstrap }}
+            
+            <button class="button" style="vertical-align:middle" type="submit">Login</button>
+            <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
+        </form>
+    </div>
     {% endblock %}

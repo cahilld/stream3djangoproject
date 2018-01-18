@@ -2,14 +2,16 @@
 {% load bootstrap_tags %}
     
 {% block content %}
-    <h2>Create an account</h2>
-    
-    <form method="POST">
+    <div class="top-padding">
+        <h2>Create an account</h2>
         
-        {% csrf_token %}
-        
-        {{ form | as_bootstrap }}
-        
-        <button class="button" style="vertical-align:middle" type="submit">Register</button>
-    </form>
+        <form method="POST">
+            
+            {% csrf_token %}
+            
+            {{ form | as_bootstrap }}
+            
+            <button class="button" style="vertical-align:middle" type="submit">Register</button>
+        </form>
+    </div>
 {% endblock %}
