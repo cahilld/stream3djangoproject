@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    padding-top: 58px;
+    padding-top: 100px;
     margin: 0px;
     background-color: #dddddd;
 }
@@ -9,6 +9,7 @@ top-padding{
 }
 aligncenter{
     margin: 0 auto;
+    text-align: center;
 }
 #deleteitem{
     background-color: red;
