@@ -211,10 +211,7 @@ a { color: inherit; }
 @media(min-width:768px){
     
 body {
-    font-family: Arial, sans-serif;
     padding-top: 50px;
-    margin: 0px;
-    background-color: #dddddd;
 }
     
 }
