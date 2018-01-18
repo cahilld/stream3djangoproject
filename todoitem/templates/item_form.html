@@ -3,7 +3,7 @@
     <div class="aligncenter">
         <h2>Add an item</h2>
 
-        <form class="form-group" method="POST">
+        <form class="form-horizontal" method="POST">
             {% csrf_token%}
             {{form.as_p}}
         
