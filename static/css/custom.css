@@ -79,7 +79,7 @@ button {
     color: white;
     border: 0;
     padding: 18px 12px;
-    margin-left: 6px;
+    /*margin-left: 0px;*/
     cursor: pointer;
     outline: none;
     width: 100%;
@@ -134,7 +134,7 @@ a { color: inherit; }
 .button {
     font-family: sans-serif;
     display: inline-block;
-    border-radius: 4px;
+    border-radius: 0px;
     background-color: rgb(29,39,68);
     border: none;
     color: white;
