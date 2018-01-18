@@ -207,3 +207,14 @@ a { color: inherit; }
     background-color: #1d2744;
     border-color: rgb(29,39,68);
 }
+
+@media(min-width:768px){
+    
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 50px;
+    margin: 0px;
+    background-color: #dddddd;
+}
+    
+}
