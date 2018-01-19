@@ -4,6 +4,10 @@ body {
     margin: 0px;
     background-color: #dddddd;
 }
+.exampleworkflowimage{
+    width:100%;
+    height:auto;
+}
 .top-padding{
     padding-top: 150px;
 }
