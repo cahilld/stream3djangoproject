@@ -26,10 +26,15 @@ Deployment method:<br/>
 Heroku<br/>
 
 Testing:<br/>
-Accounts app    Generic test to test the testing system - Addition is Equal and NotEqual
-                Registration test with valid details, missing second password, and not matching passwords.
+Accounts app    Generic test to test the testing system - Addition is Equal.
+                Generic test to test the testing system - Addition is NotEqual.
+                Registration test with valid details.
+                Registration test with missing second password.
+                Registration test with not matching passwords.
 
 ToDoItem app    Resolves to the home page
+                Resolves without error to index.html
+                Create a to do item
 
 Manual testing has been done for the credit card payments. Since deployment these settings wont change from pushes to GitHub as they are stored as config variables on Heroku.
 
@@ -51,17 +56,3 @@ List of Django reusable app components:<br/>
 * Donations   Products page, where different types of donations are the products.
 * Cart        Shopping cart functionality, ability to adjust quantities before committing to the checkout payment.
 * Checkout    Pay for cart using Stripe to fulfil e-commerse payments.
-
-Requirements for project:<br/>
-* Multiple app Django apps for each separate reusable component
-* Authentication mechanism - register, login, log out, and reset password.
-* E-commerce functionality - Stripe and/or Paypal
-* Validaton form allowing users to edit models
-* Project needs to connect to a SQL database
-* Responsive UI - Bootstrap & media queries
-* Great User Experiemce UX
-* Javascript Logic for enhanced frontend UX
-* Backend Python/Django Packages - EG Disquis, Django Rest Framework - using the best tool for the task
-* Text Exensively - Use automated Django tests wherever possible. For your JavaScript code, consider using Jasmine tests. 
-* README.md - What the project does, Need that it fulfils, Functionality of the project, Technologies used, Deployment method, Testing and Accreditation, What was kept and How it was changed.
-

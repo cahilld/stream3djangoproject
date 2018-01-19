@@ -10,7 +10,15 @@ class TodoItemPageTest(TestCase):
         todoitem_page = resolve('/')
         self.assertEqual(todoitem_page.func, get_index)
         
-# class TestToDoItemForm(TestCase):
-#     def test_createtodoitem(self):
-#         form = TodoItemForm({"name":"Test create to do item", "description":"Test Description", "status":"Done"})
-#         self.assertTrue(form.is_valid())
+    def test_get_home_page(self):
+        page = self.client.get("/")
+        self.assertEqual(page.status_code, 200)
+        self.assertTemplateUsed(page, "index.html")
+       
+class TestToDoItemForm(TestCase):
+    def test_createtodoitem(self):
+        form = TodoItemForm({"name":"Test create to do item", "description":"Test Description", "status":"D"})
+        form.is_valid()
+        print(form.errors)
+        self.assertTrue(form.is_valid())
+        

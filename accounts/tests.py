@@ -1,5 +1,4 @@
 from django.test import TestCase
-from todoitem.views import get_index
 from django.core.urlresolvers import resolve
 from .forms import UserRegistrationForm, UserLoginForm
 from django import forms
@@ -14,7 +13,7 @@ class SimpleTest(TestCase):
  
     def test_adding_something_isnt_equal(self):
         self.assertNotEqual( 1 + 2, 4 )
-        
+
 class UserRegistrationTest(TestCase):
     def test_registration_form(self):
         form = UserRegistrationForm({
