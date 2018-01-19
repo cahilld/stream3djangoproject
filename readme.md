@@ -1,10 +1,5 @@
 Stream 3 Django project<br/>
 
-Issues outstanding:<br/>
-1   In mobile mode page heading on index page being hidden with collapsed menu (design)
-2   Payment success page (UX)
-3   Deployment to Heroku
-
 Purpose:<br/>
 This is a lightweight app that allows users to login and configure their own workflow similar to a KanBan board with a focus on doing one task at a time until it is fully completed.<br/>
 
@@ -31,16 +26,22 @@ Deployment method:<br/>
 Heroku<br/>
 
 Testing:<br/>
-Register, Log In, Log Out, Create To Do Items, Donate, Add donations to cart, Checkout with Stripe, Verify payment received in Stripe.
+Accounts app    Generic test to test the testing system - Addition is Equal and NotEqual
+                Registration test with valid details, missing second password, and not matching passwords.
+
+ToDoItem app    Resolves to the home page
+
+Manual testing has been done for the credit card payments. Since deployment these settings wont change from pushes to GitHub as they are stored as config variables on Heroku.
 
 Accreditation:<br/>
 Dragula<br/>
 https://bevacqua.github.io/dragula/
 <br/>
   
-A lot of customisation was done to the files, but the core drag and drop functionality was used to style the front end and contribute to UX and UI.<br/>
+A lot of customisation was done to the core Dragula files including increasing the amount of columns, adding an Ajax call on drop to update the database with a status change, and styling.
+The core drag and drop functionality was used to style the front end and contribute to UX and UI.<br/>
 
-Mockup file:<br/>
+Mockup file changed drastically upon deciding to go for drag and drop functionality:<br/>
 stream3mockup.png
 <br/>
   
