@@ -4,15 +4,15 @@ body {
     margin: 0px;
     background-color: #dddddd;
 }
-top-padding{
+.top-padding{
     padding-top: 150px;
 }
-aligncenter{
+.aligncenter{
     margin: 0 auto;
     text-align: center;
 }
 #deleteitem{
-    background-color: red;
+    background-color: #cc0000;
     padding: 0;
     margin: 0 auto;
 }
