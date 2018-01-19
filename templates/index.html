@@ -56,9 +56,28 @@
     {% else %}
     <p>Please register for a free account so you can create your own workflow app.</p>
     <br>
-    <p>
-    The purpose of this app is to assist with managing the current tasks in a minimal easy to input design 
-    </p>
+    <section>
+        <article>
+            <p>
+                The purpose of this app is to assist with managing daily workflow tasks in a minimal easy to input design.<br>
+                Less time to setup more time to take action.<br>
+            </p>
+            <p>
+                How it works
+                It is important to break work down into their smallest managable tasks so items dont get stuck pending something else.<br>
+            <ul>
+                <li>Column 1 - Queued - Not currently being actioned or scheduled, but needs to be done at a lesser priority to what is currently being actioned.</li>
+                <li>Column 2 - In progress - Work that has been taken on to complete preferably one task at a time until it is fully completed.</li>
+                <li>Column 3 - Completed tasks - Items which are fully completed, and dont need to be touchedd again. Items can only be deleted from here. Refresh the browser to get the option to delete.</li>
+                <li>Column 4 - Abandoned tasks - Items which do not need to be done anymore. No notes needed as they will be visible to do again at a later date if time permits.</li>
+            </ul>
+            </p>
+            <p>
+                Once you have added items they will be visible in the following format allowing you to drag them to the next column to action, complete, or abandon.
+            </p>
+            <img src="/media/images/exampleworkflow.PNG" alt="Example Layout image">
+        </article>
+    </section>
 {% endif %}
 
 {% endblock content %}
