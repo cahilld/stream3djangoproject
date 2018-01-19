@@ -21,6 +21,9 @@ body {
     margin: 0 auto;
 }
 /* Navbar */
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+     border-color: #000000; 
+}
 a.navbar-brand{
     padding-top: 20px;
     padding-bottom: 5px;
