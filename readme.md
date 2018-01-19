@@ -47,7 +47,7 @@ A lot of customisation was done to the core Dragula files including increasing t
 The core drag and drop functionality was used to style the front end and contribute to UX and UI.<br/>
 
 Mockup file changed drastically upon deciding to go for drag and drop functionality:<br/>
-stream3mockup.png
+![Mobile Markdown](./stream3mockup.png)
 <br/>
   
 List of Django reusable app components:<br/>
