@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0px;
     background-color: #dddddd;
 }
