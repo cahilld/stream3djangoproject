@@ -6,11 +6,11 @@ body {
 }
 .exampleworkflowimage{
     width:100%;
-    height:auto;
+    height:aut;
 }
-/*.top-padding{*/
-/*    padding-top: 150px;*/
-/*}*/
+.top-padding{
+    /*padding-top: 150px;*/
+}
 .aligncenter{
     margin: 0 auto;
     text-align: center;
