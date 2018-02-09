@@ -11,7 +11,7 @@ dragula([$('#P')[0], $('#I')[0], $('#D')[0], $('#A')[0]])
   .on('drop', function (el, target) {
     $.ajax({
       type: "POST",
-      url: 'https://stream3-djangoproject-desc.c9users.io/move/',
+      url: 'https://stream3workflow.herokuapp.com/move/',
       data: { 'id': el['id'], 'status': target['id'] },
       headers: { 
           "X-CSRFToken": csrf_token 
